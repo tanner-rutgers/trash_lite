@@ -1,0 +1,7 @@
+NUM_LEDS = 5
+
+INITIAL_LEDS = {
+  MODE = "rainbow",
+  SPEED = 230,
+  BRIGHTNESS = 50
+}
