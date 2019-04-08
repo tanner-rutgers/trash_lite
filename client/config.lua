@@ -1,3 +1,3 @@
 FILES = {
-  "wifi.lua", "leds.lua"
+  "wifi.lua", "calendar.lua", "leds.lua"
 }

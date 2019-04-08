@@ -1,0 +1,1 @@
+http.get("http://script.google.com/macros/s/AKfycbyhGHrsPfNhihXfxIdLH0oVJsgpxmb3N5KCVXRvkrmpFv-NAQA/exec", function(code, data) print(code) end)
