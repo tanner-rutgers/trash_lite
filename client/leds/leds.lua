@@ -11,10 +11,8 @@ function update_leds()
   led_timer:unregister()
 
   if #colors > 1 then
-    -- ws2812_effects.stop()
     cycle_colors()
   elseif #colors == 1 then
-    -- ws2812_effects.stop()
     write_color(colors[1])
   else
     write_default_colors()
@@ -53,8 +51,8 @@ end
 
 function write_color(grb)
   print("Writing color " .. table.concat(grb, ","))
-  ws2812_effects.set_mode("static")
   ws2812_effects.set_color(unpack(grb))
+  ws2812_effects.set_mode("static")
 end
 
 update_leds()
