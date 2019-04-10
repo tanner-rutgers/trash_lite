@@ -3,7 +3,6 @@ dofile("led_config.lua")
 colors = {}
 led_timer = tmr.create()
 ws2812.init(ws2812.MODE_SINGLE)
-buffer = ws2812.newBuffer(NUM_LEDS, 3)
 
 function update_leds()
   print("Updating leds...")
@@ -20,11 +19,7 @@ function update_leds()
 end
 
 function write_default_colors()
-  ws2812_effects.init(buffer)
-  ws2812_effects.set_speed(255)
-  ws2812_effects.set_brightness(30)
-  ws2812_effects.set_mode("rainbow")
-  ws2812_effects.start()
+  write_color(DEFAULT_COLOR)
 end
 
 function update_led_colors(new_colors)
@@ -51,8 +46,12 @@ end
 
 function write_color(grb)
   print("Writing color " .. table.concat(grb, ","))
-  ws2812_effects.set_color(unpack(grb))
-  ws2812_effects.set_mode("static")
+  for i=1, NUM_LEDS do
+    for j = 1, 3 do
+      table.insert(grb, 0)
+    end
+  end
+  ws2812.write(string.char(unpack(grb)))
 end
 
 update_leds()
