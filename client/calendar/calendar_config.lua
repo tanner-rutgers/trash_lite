@@ -4,5 +4,5 @@ BIN_COLORS = {
   ["garbage"] = { 0, 255, 0 },
   ["green bin"] = { 255, 0, 0 },
   ["blue bin"] = { 0, 0, 255 },
-  ["black bin"] = { 0, 255, 255 }
+  ["black bin"] = { 0, 150, 255 }
 }
