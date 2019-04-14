@@ -44,7 +44,8 @@ function cycle_colors()
   end)
 end
 
-function write_color(grb)
+function write_color(color)
+  local grb = { unpack(color) }
   print("Writing color " .. table.concat(grb, ","))
   for i=1, NUM_LEDS do
     for j = 1, 3 do
