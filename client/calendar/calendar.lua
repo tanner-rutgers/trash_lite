@@ -24,4 +24,4 @@ function update_leds_from_garbage_data(data)
   update_led_colors(colors)
 end
 
-tmr.create():alarm(1000 * 30, 1, update_leds_from_calendar)
+tmr.create():alarm(1000 * 60, 1, update_leds_from_calendar)
